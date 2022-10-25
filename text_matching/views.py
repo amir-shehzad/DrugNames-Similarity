@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from difflib import SequenceMatcher
 import csv
+import os
 
-file_name = "/home/aamir/Videos/codility-software-test/text_matching/inputs/Dummy-medical-dataset.csv"
+directory = os.getcwd()
+
+file_name = directory + '/text_matching/inputs/' + "Dummy-medical-dataset.csv"
 
 
 def read_csv_file(file_name):
@@ -56,3 +59,4 @@ def search_similar_values(request):
 
 
 # print(len(read_csv_file(file_name)[1]))
+read_csv_file(file_name)
